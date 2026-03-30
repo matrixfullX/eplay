@@ -1,24 +1,30 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  branco: '#333',
+  branco: '#eee',
   preto: '#111',
-  cinza: '#EEEEEE',
+  cinza: '#333',
   verde: '#10AC84'
 }
 
-const GlobalCSS = createGlobalStyle`
+export const GlobalCSS = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    list-style: none;
   }
 
   body {
     background-color: ${cores.preto};
     color: ${cores.branco};
+    padding-top: 40px;
   }
 `
 
-export default GlobalCSS
+export const Container = styled.div`
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+`
